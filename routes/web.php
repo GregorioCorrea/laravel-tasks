@@ -36,7 +36,7 @@ Route::post('/task', function (Request $request) {
     ]);
 
     if ($validator->fails()) {
-        error_log("ERROR: Add task failed.");
+        error_log("ERROR: El comando Add task ha fallado.");
         return redirect('/')
             ->withInput()
             ->withErrors($validator);
